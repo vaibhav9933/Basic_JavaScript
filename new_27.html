@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <script>
+        // static array value
+        var ary = new Array();
+        ary[0] = "HTML";
+        ary[1] = "CSS";
+        ary[2] = "JAVASCRIPT";
+        ary[3] = "100";
+        ary[4] = "true";
+        document.write("<ul>");
+            for(var a = 0; a < 5; a++){
+                document.write("<li>" + ary[a] + "</li>");
+            }
+            document.write("</ul>");
+
+        // dynamic array value
+        var aa = new Array();
+        for ( var g = 0; g<3; g++){
+            aa[g] = prompt("Enter Value : ");
+        }
+        document.write("<ul>");
+            for(var a=0; a<3;a++){
+                document.write("<li>"+aa[a]+"</li>");
+            }
+            document.write("</ul>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
