@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        //javascrpt number methods
+       /*.Number()
+        . toString()
+        . toFixed()
+        . toPrecision()
+        . valueOf()
+        . toExponential()
+        . toFixed()
+        . toLocaleString()
+        . parseInt()
+        . parseFloat()
+        . isNaN()
+        . isFinite()
+        . isInteger()
+        . isSafeInteger() */
+
+        var a = "99";
+        var num = Number(a);
+        document.write(num + 10 +  "<br><br>");
+
+        var b = 99.23;
+        var num1 = parseInt(b);
+        document.write(num1 + 10 +  "<br><br>");
+
+        var c = 99.23;
+        var num2 = parseFloat(c);   
+        document.write(num2 + 10 +  "<br><br>");
+
+        var d = 100;
+        var num3 = Number.isFinite(d);
+        document.write(num3 +  "<br><br>");
+
+        var e = 100;
+        var num4 = Number.isInteger(e);
+        document.write(num4 +  "<br><br>");
+
+        var f = 5.02541154;
+        var num5 = f.toFixed(2);
+        document.write(num5 +  "<br><br>");
+
+        var g = 5.02541154;
+        var num6 = g.toPrecision(2);
+        document.write(num6 +  "<br><br>");
+    </script>
+</body>
+</html>
