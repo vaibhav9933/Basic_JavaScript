@@ -3,13 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
-
-    <script>
-        
-    </script>
+    <title>JavaScript</title>
+    <style>
+        /* Form basic events:
+           - keydown
+           - keypress
+           - keyup
+           - focus
+           - blur
+           - input
+           - change
+           - select
+           - submit
+           - invalid
+        */
+    </style>
 </head>
 <body>
+    <form action="" onsubmit="submitFunction(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="fname" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" name="name" required><br><br>  
+        
+        <label for="class">Class:</label>
+        <input type="text" id="class" onfocus="focusFunction(this)" onblur="blurFunction(this)" name="class" required><br><br>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" onfocus="focusFunction(this)" onblur="blurFunction(this)" name="country" required><br><br>
+        
+        <label for="selectCountry">Select Country:</label>
+        <select id="selectCountry">
+            <option value="1">INDIA</option>
+            <option value="2">PAKISTAN</option>
+            <option value="3">USA</option>
+            <option value="4">NEPAL</option>
+            <option value="5">SRI LANKA</option>
+        </select>
+        <br><br>
+    </form>
+    <br><br>
+    <div id="test" style="border: 1px solid red"></div>
     
+    <script>
+        function focusFunction(element) {
+            element.style.background = "lime";
+        }
+        
+        function blurFunction(element) {
+            element.style.background = "";
+        }
+
+        function inputFunction(element) {
+            var x = element.value;
+            document.getElementById("test").innerHTML = x;
+        }
+
+        function submitFunction(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+        }
+    </script>
 </body>
 </html>
