@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        /* Form basic events:
+           - keydown
+           - keypress
+           - keyup
+           - focus
+           - blur
+           - input
+           - change
+           - select
+           - submit
+           - invalid
+        */
+
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="submitFunction(event)">
+        <label>Name:</label>
+        <input type="text" id="fname" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" name="name" required><br><br>  
+        
+        <label for="class">Class:</label>
+        <input type="text" id="class" onfocus="focusFunction(this)" onblur="blurFunction(this)" name="class" required><br><br>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" onfocus="focusFunction(this)" onblur="blurFunction(this)" name="country" required><br><br>
+        
+        <label for="selectCountry">Select Country:</label>
+        <select id="selectCountry" onfocus="focusFunction(this)" onblur="blurFunction(this)" onchange="changeFunction(this)">
+            <option value="INDIA">INDIA</option>
+            <option value="PAKISTAN">PAKISTAN</option>
+            <option value="USA">USA</option>
+            <option value="NEPAL">NEPAL</option>
+            <option value="SRI">SRI LANKA</option>
+        </select>
+        <br><br>
+    </form>
+    <br><br>
+    <div id="test" style="border: 1px solid red"></div>
+    
+    <script>
+        function focusFunction(element) {
+            element.style.background = "lime";
+        }
+        
+        function blurFunction(element) {
+            element.style.background = "";
+        }
+
+        function inputFunction(element) {
+            var x = element.value;
+            document.getElementById("test").innerHTML = x;
+        }
+
+        function submitFunction(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+
+
+        }
+
+        function changeFunction(element) {
+            var x = element.value;
+            document.getElementById("test").innerHTML = "Selected Country: " + x;
+        }
+    </script>
+</body>
+</html>
